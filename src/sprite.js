@@ -16,7 +16,6 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 
     this.anchorX = 0.5
     this.anchorY = 0.5
-    this.start = 1
     this.animationSpeed = 1
     this.blend = 'NORMAL'
     this.loop = false
@@ -56,13 +55,5 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
   }
   loop ( handler ) {
     this.on( 'loop', handler )
-  }
-
-  play ( frame ) {
-    this.gotoAndPlay( frame || this.start )
-  }
-
-  stop () {
-    super.stop()
   }
 }
