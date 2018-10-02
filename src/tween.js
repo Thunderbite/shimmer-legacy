@@ -6,7 +6,7 @@ module.exports = class Tween {
 
     this.from = from || 0
     this.to = to || 0
-    this.step = step || 1
+    this.step = step || 0
 
     this.__current = this.from
   }
