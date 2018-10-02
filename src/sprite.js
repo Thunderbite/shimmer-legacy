@@ -14,8 +14,8 @@ module.exports = class Sprite extends PIXI.extras.AnimatedSprite {
 
     this.__eventHandlers = {}
 
-    this.anchorX = 0.5
-    this.anchorY = 0.5
+    this.anchor.x = 0.5
+    this.anchor.y = 0.5
     this.animationSpeed = 1
     this.blend = 'NORMAL'
     this.loop = false
