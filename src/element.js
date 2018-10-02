@@ -23,7 +23,9 @@ module.exports = class Element extends PIXI.Container {
     tween.end( () => {
       delete this.__tweens[ id ]
     } )
-    tween.each( oneach )
+    if ( typeof oneach === 'function' ) {
+      tween.each( oneach )
+    }
     this.__tweens[ id ] = tween
     return tween
   }
