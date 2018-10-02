@@ -48,7 +48,7 @@ module.exports = class Tween {
   }
 
   __triggerEvent ( name, value ) {
-    let events = this.__eventHandlers[ name ]
+    let events = this.__eventHandlers[ name ] || []
     for ( let i = 0; i < events.length; i++ ) {
       events[ i ]( value )
     }
