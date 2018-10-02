@@ -29,14 +29,15 @@ module.exports = class Tween {
       throw new Error( 'Tween expects an event handler ( function ) ' + ( typeof handler ) + ' given' )
     }
     this.__eventHandlers[ ev ].push( handler )
+    return this
   }
 
   // Shorthand event handlers
   each ( handler ) {
-    this.on( 'each', handler )
+    return this.on( 'each', handler )
   }
   end ( handler ) {
-    this.on( 'end', handler )
+    return this.on( 'end', handler )
   }
 
   __triggerEvent ( name, value ) {
@@ -52,6 +53,7 @@ module.exports = class Tween {
     } else {
       this.__current = this.from
     }
+    return this
   }
 
   next ( delta ) {
