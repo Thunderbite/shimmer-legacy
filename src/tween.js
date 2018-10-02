@@ -1,26 +1,18 @@
 'use strict'
 
 module.exports = class Tween {
-  constructor () {
-    this.__current = 0
-
+  constructor ( from, to, step ) {
     this.__eventHandlers = {}
 
-    this.__from = 0
-    this.__to = 0
-    this.__step = 0
-    this.__function = ( x ) => {
-      return x
-    }
+    this.from = from || 0
+    this.to = to || 0
+    this.step = step || 1
+
+    this.__current = this.from
   }
 
-  static create ( from, to, step, f ) {
-    let tween = new Tween()
-    tween.setRange( from, to, step )
-    if ( f ) {
-      tween.setFunction( f )
-    }
-    return tween
+  static create ( from, to, step ) {
+    return new Tween( from, to, step )
   }
 
   // Convert floats to integer to prevent E numbers
@@ -50,7 +42,7 @@ module.exports = class Tween {
   __triggerEvent ( name, value ) {
     let events = this.__eventHandlers[ name ] || []
     for ( let i = 0; i < events.length; i++ ) {
-      events[ i ]( value )
+      events[ i ].call( this, value )
     }
   }
 
@@ -58,45 +50,31 @@ module.exports = class Tween {
     if ( frame ) {
       this.__current = parseInt( frame )
     } else {
-      this.__current = this.__from
+      this.__current = this.from
     }
-  }
-
-  setRange ( from, to, step ) {
-    this.__from = from
-    this.__current = from
-    this.__to = to
-    this.__step = step || 1
-  }
-
-  setFunction ( f ) {
-    if ( typeof f !== 'function' ) {
-      throw new Error( 'Tween requires a function. ' + ( typeof f ) + ' is not a function.' )
-    }
-    this.__function = f
   }
 
   next ( delta ) {
-    this.__current = this.__unapprox( this.__approx( this.__current ) + this.__approx( this.__step ) * delta )
+    this.__current = this.__unapprox( this.__approx( this.__current ) + this.__approx( this.step ) * delta )
 
-    if ( this.__current >= this.__to ) {
+    if ( this.__current >= this.to ) {
       // End
       this.__triggerEvent( 'end' )
-      this.__current = this.__to
+      this.__current = this.to
     }
 
-    this.__triggerEvent( 'each', this.__function( this.__current ) )
+    this.__triggerEvent( 'each', this.__current )
   }
 
   prev ( delta ) {
-    this.__current = this.__unapprox( this.__approx( this.__current ) - this.__approx( this.__step ) * delta )
+    this.__current = this.__unapprox( this.__approx( this.__current ) - this.__approx( this.step ) * delta )
 
-    if ( this.__current <= this.__from ) {
+    if ( this.__current <= this.from ) {
       // End
       this.__triggerEvent( 'end' )
-      this.__current = this.__from
+      this.__current = this.from
     }
 
-    this.__triggerEvent( 'each', this.__function( this.__current ) )
+    this.__triggerEvent( 'each', this.__current )
   }
 }

@@ -17,9 +17,9 @@ module.exports = class Element extends PIXI.Container {
     this.__children = {}
   }
 
-  _createTween ( from, to, step, f, oneach ) {
+  _createTween ( from, to, step, oneach ) {
     let id = uid()
-    let tween = Tween.create( from, to, step, f )
+    let tween = Tween.create( from, to, step )
     tween.end( () => {
       delete this.__tweens[ id ]
     } )
