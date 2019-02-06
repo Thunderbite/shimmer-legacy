@@ -10,14 +10,19 @@
     <meta name="HandheldFriendly" content="true" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="Shimmer">
+    <meta name="apple-mobile-web-app-title" content="Open the Box">
+
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CMutationObserver%2CString.prototype.padStart%2Cconsole.info"></script>    
 
     <base href="/" />
-    
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,MutationObserver,console.info,es5,es6,Audio"></script>
-
+        
     <link rel="stylesheet" href="app.css" />
 
+    <script>
+        var config = {
+            debug: true
+        }
+    </script>
 </head>
 <body>
     <script src="app.min.js"></script>

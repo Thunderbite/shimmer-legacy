@@ -1,4 +1,4 @@
 'use strict'
 
-require( './styles/app.scss' )
-require( './scripts/app.js' )
+require( './styles/index.scss' )
+require( './scripts/index.js' )

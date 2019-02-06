@@ -1,5 +1,5 @@
 # shimmer
-A canvas based graphical library
+A PIXI.JS wrapper plugin for MODUX
 
 ## Installation
 
@@ -7,19 +7,28 @@ A canvas based graphical library
 npm install CrispCode/shimmer#master --save-dev
 ```
 
+## Documentation & Testing
+
+Clone the shimmer repository to your machine and use the following commands:
+
+To generate a documentation use `npm run docs`
+If you want to check functionality you can use `npm run test` 
+
 ## Polyfill
 
 In order to support older versions of browsers, you can use polyfills:
 
 ```
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,MutationObserver,console.info,es5,es6,Audio"></script>
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=default%2CMutationObserver%2CString.prototype.padStart%2Cconsole.info"></script>
 ```
 
-### Shimmer classes
+## Shimmer classes
 
-  1. `Button` - A class used to make buttons
-  2. `Element` - The base class of each graphical element
-  3. `Scene` - The stage class
-  4. `Sprite` - A class used to create sprites
-  5. `Stage` - The main container class
-  6. `Text` - A class used to create text elements
+  |Name|Usage|Description|
+  |:---:|---|---|
+  | Button | `import { Button } from 'shimmer'` | The Button class is an extension of the standard Element class |
+  | Element | `import { Element } from 'shimmer'` | The base class for all Shimmer objects |
+  | Shimmer | `import { Shimmer } from 'shimmer'` | The Shimmer component class, check Modux/Component for more information |
+  | Tween | `import { Tween } from 'shimmer'` | A class used to create animation tweens in Element or Shimmer |
+
+  | PIXI | `import { PIXI } from 'shimmer'` | Output of the entire PIXI library (since PIXI doesn't do proper treeshaking yet) |
