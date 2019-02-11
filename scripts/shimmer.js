@@ -3,7 +3,7 @@
 'use strict'
 
 import { Component, loop } from 'modux'
-import { Loader, ticker, utils, autoDetectRenderer } from 'pixi.js'
+import { loaders, ticker, utils, autoDetectRenderer } from 'pixi.js'
 
 import { Element } from './element.js'
 
@@ -35,7 +35,7 @@ export class Shimmer extends Component {
    * @return {Promise} A promise which is resolved upon loading the assets. It resolves the loaded resources.
    */
   preload ( assets ) {
-    let loader = new Loader()
+    let loader = new loaders.Loader()
     return new Promise( ( resolve ) => {
       loop( assets, ( data, name ) => {
         loader.add( name, data )

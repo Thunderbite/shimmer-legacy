@@ -22,7 +22,7 @@ let initialize = () => {
     .addDependency( 'layout', LayoutComponent )
     .addDependency( 'shimmer', ShimmerComponent )
 
-  app.__config.set( 'app', app )
+  app.config.set( 'app', app )
 
   // Start application
   app.bootstrap( document.querySelector( 'body' ), 'layout' )

@@ -6,10 +6,10 @@ import { Sprite } from 'pixi.js'
 import { Element } from './../../../../scripts'
 
 export class Moon extends Element {
-  constructor () {
+  constructor ( texture ) {
     super()
 
-    let image = Sprite.fromImage( '/image2.png' )
+    let image = new Sprite( texture )
 
     image.anchor.x = 0.5
     image.anchor.y = 0.5
