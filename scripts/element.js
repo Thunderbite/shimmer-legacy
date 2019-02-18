@@ -133,7 +133,7 @@ export class Element extends Container {
     loop( this.__tweens, ( tween ) => {
       tween.next( delta )
     } )
-    loop( this.getElementChildren(), ( element ) => {
+    loop( this.getElementChild(), ( element ) => {
       element.render( delta )
     } )
   }
