@@ -96,10 +96,14 @@ export class Element extends Container {
   }
 
   /**
-   * Returns all child Elements
+   * Returns a child or all child Elements
+   * @param {String} [name=null] If provided, will return the child with this identifier
    * @return {Object} An object containing all the child Elements
    */
-  getElementChildren () {
+  getElementChild ( name ) {
+    if ( name ) {
+      return this.__children[ name ]
+    }
     return this.__children
   }
 
