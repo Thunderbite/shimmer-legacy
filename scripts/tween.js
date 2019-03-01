@@ -112,9 +112,12 @@ export class Tween {
    * @param {Number} delta The time interval caused by FPS
    */
   next ( delta ) {
-    this.__current = approx( this.__current + approx( this.step * delta, 6 ) )
+    this.__current = approx( this.__current + approx( this.step * delta, 6 ), 6 )
 
-    if ( this.__current >= this.to ) {
+    if (
+      ( ( this.from <= this.to ) && ( this.__current >= this.to ) ) ||
+      ( ( this.from >= this.to ) && ( this.__current <= this.to ) )
+    ) {
       // End
       this.__triggerEvent( 'end' )
       this.__current = this.to
@@ -128,9 +131,12 @@ export class Tween {
    * @param {Number} delta The time interval caused by FPS
    */
   prev ( delta ) {
-    this.__current = approx( this.__current - approx( this.step * delta, 6 ) )
+    this.__current = approx( this.__current - approx( this.step * delta, 6 ), 6 )
 
-    if ( this.__current <= this.from ) {
+    if (
+      ( ( this.from <= this.to ) && ( this.__current <= this.from ) ) ||
+      ( ( this.from >= this.to ) && ( this.__current >= this.from ) )
+    ) {
       // End
       this.__triggerEvent( 'end' )
       this.__current = this.from
