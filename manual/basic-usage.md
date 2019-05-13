@@ -4,7 +4,7 @@
 ```
 'use strict'
 
-import { Element, PIXI } from 'shimmer'
+import { Element } from 'shimmer'
 
 export class Moon extends Element {
   constructor () {

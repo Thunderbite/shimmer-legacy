@@ -58,7 +58,7 @@ export class Moon extends Element {
     this.__rotating = false
   }
 
-  render ( delta ) {
+  tick ( delta ) {
     if ( this.__rotating ) {
       this.__angle = this.__angle + this.__speed
       if ( this.__angle === 360 ) {

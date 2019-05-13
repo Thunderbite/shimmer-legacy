@@ -4,7 +4,8 @@
 ```
 'use strict'
 
-import { Button, PIXI } from 'shimmer'
+import { Button } from 'shimmer'
+import * as PIXI from 'pixi.js'
 
 export class ButtonMain extends Button {
   constructor () {
@@ -40,7 +41,8 @@ export class ButtonMain extends Button {
 
 import { radians } from 'modux'
 
-import { Element, PIXI } from 'shimmer'
+import { Element } from 'shimmer'
+import * as PIXI from 'pixi.js'
 
 export class Moon extends Element {
   constructor () {
@@ -95,7 +97,7 @@ export class Moon extends Element {
     this.__rotating = false
   }
 
-  render ( delta ) {
+  tick ( delta ) {
     if ( this.__rotating ) {
       this.__angle = this.__angle + this.__speed
       if ( this.__angle === 360 ) {

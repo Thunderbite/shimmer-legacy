@@ -129,12 +129,12 @@ export class Element extends Container {
    * A method called by the renderer on each animation frame
    * @param {Number} delta The delta time between cycles
    */
-  render ( delta ) {
+  tick ( delta ) {
     loop( this.__tweens, ( tween ) => {
       tween.next( delta )
     } )
     loop( this.getElementChild(), ( element ) => {
-      element.render( delta )
+      element.tick( delta )
     } )
   }
 }

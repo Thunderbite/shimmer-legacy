@@ -3,7 +3,7 @@
 'use strict'
 
 import { Component, loop } from 'modux'
-import { loaders, ticker, utils, autoDetectRenderer } from 'pixi.js'
+import { Loader, Ticker, utils, autoDetectRenderer } from 'pixi.js'
 
 import { Element } from './element.js'
 
@@ -35,7 +35,7 @@ export class Shimmer extends Component {
    * @return {Promise} A promise which is resolved upon loading the assets. It resolves the loaded resources.
    */
   preload ( assets ) {
-    let loader = new loaders.Loader()
+    let loader = new Loader()
     return new Promise( ( resolve ) => {
       loop( assets, ( data, name ) => {
         loader.add( name, data )
@@ -67,9 +67,9 @@ export class Shimmer extends Component {
      * Stores the main ticker, which handles animation frames
      * @type {Ticker}
      */
-    this.ticker = new ticker.Ticker()
+    this.ticker = new Ticker()
     this.ticker.add( ( delta ) => {
-      this.stage.render( delta )
+      this.stage.tick( delta )
       this.renderer.render( this.stage )
     } )
 
