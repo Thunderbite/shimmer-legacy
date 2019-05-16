@@ -3,7 +3,15 @@
 'use strict'
 
 import { Component, loop } from 'modux'
-import { Loader, Ticker, utils, autoDetectRenderer } from 'pixi.js'
+
+import { Loader } from '@pixi/loaders'
+import { Ticker } from '@pixi/ticker'
+import { autoDetectRenderer, Renderer, BatchRenderer } from '@pixi/core'
+import { InteractionManager } from '@pixi/interaction'
+import { skipHello } from '@pixi/utils'
+
+Renderer.registerPlugin( 'interaction', InteractionManager )
+Renderer.registerPlugin( 'batch', BatchRenderer )
 
 import { Element } from './element.js'
 
@@ -55,7 +63,7 @@ export class Shimmer extends Component {
   constructor ( parent, config, store ) {
     super( parent, config, store )
 
-    utils.skipHello()
+    skipHello()
 
     /**
      * Stores the parent Element
@@ -83,6 +91,7 @@ export class Shimmer extends Component {
       antialias: true,
       resolution: window.devicePixelRatio || 1
     } )
+
     this.renderer.resize( this.element.clientWidth, this.element.clientHeight )
 
     this.renderer.plugins.interaction.autoPreventDefault = false

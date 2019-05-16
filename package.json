@@ -15,12 +15,20 @@
   "bugs": {
     "url": "https://github.com/CrispCode/shimmer/issues"
   },
+  "dependencies": {
+    "@pixi/core": "^5.0.2",
+    "@pixi/display": "^5.0.1",
+    "@pixi/ticker": "^5.0.1",
+    "@pixi/loaders": "^5.0.2",
+    "@pixi/interaction": "^5.0.2",
+    "@pixi/utils": "^5.0.1"
+  },
   "peerDependencies": {
     "modux": "CrispCode/modux#v2"
   },
   "devDependencies": {
     "modux": "CrispCode/modux#v2",
-    "pixi.js": "^5.0.2",
+    "@pixi/sprite": "^5.0.2",
     "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0"
   },

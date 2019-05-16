@@ -1,7 +1,8 @@
 'use strict'
 
 import { radians } from 'modux'
-import { Sprite } from 'pixi.js'
+
+import { Sprite } from '@pixi/sprite'
 
 import { Element } from './../../../../scripts'
 

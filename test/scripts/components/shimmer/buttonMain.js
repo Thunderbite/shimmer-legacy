@@ -1,6 +1,6 @@
 'use strict'
 
-import { Sprite } from 'pixi.js'
+import { Sprite } from '@pixi/sprite'
 
 import { Button } from './../../../../scripts'
 

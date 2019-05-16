@@ -1,7 +1,8 @@
 'use strict'
 
 import { loop, uid } from 'modux'
-import { Container } from 'pixi.js'
+
+import { Container } from '@pixi/display'
 
 import { Tween } from './tween.js'
 
