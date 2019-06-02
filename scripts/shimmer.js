@@ -70,6 +70,8 @@ export class Shimmer extends Component {
      * @type {Element}
      */
     this.stage = new Element()
+    this.stage.__config = this.config
+    this.stage.__store = this.store
 
     /**
      * Stores the main ticker, which handles animation frames
