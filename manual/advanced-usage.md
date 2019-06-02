@@ -5,18 +5,18 @@
 'use strict'
 
 import { Button } from 'shimmer'
-import * as PIXI from 'pixi.js'
+import { Sprite } from 'shimmer'
 
 export class ButtonMain extends Button {
   constructor () {
     super()
 
-    let image = PIXI.Sprite.fromImage( '/image1.png' )
+    let image = Sprite.fromImage( '/image1.png' )
 
     image.anchor.x = 0.5
     image.anchor.y = 0.5
 
-    this.addChild( image )
+    this.addElementChild( 'image', image )
 
     this.onMouseOver( () => {
       this.createTween( 10, 12, 1, ( value ) => {
@@ -42,13 +42,13 @@ export class ButtonMain extends Button {
 import { radians } from 'modux'
 
 import { Element } from 'shimmer'
-import * as PIXI from 'pixi.js'
+import { Sprite } from 'shimmer'
 
 export class Moon extends Element {
   constructor () {
     super()
 
-    let image = PIXI.Sprite.fromImage( '/image2.png' )
+    let image = Sprite.fromImage( '/image2.png' )
 
     image.anchor.x = 0.5
     image.anchor.y = 0.5
@@ -63,7 +63,7 @@ export class Moon extends Element {
 
     this.__rotating = false
 
-    this.addChild( image )
+    this.addElementChild( 'image', image )
   }
 
   __move ( delta ) {

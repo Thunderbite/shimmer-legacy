@@ -2,9 +2,7 @@
 
 import { radians } from 'modux'
 
-import { Sprite } from '@pixi/sprite'
-
-import { Element } from './../../../../scripts'
+import { Element, Sprite } from './../../../../scripts'
 
 export class Moon extends Element {
   constructor ( texture ) {

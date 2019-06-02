@@ -1,8 +1,6 @@
 'use strict'
 
-import { Sprite } from '@pixi/sprite'
-
-import { Button } from './../../../../scripts'
+import { Button, Sprite } from './../../../../scripts'
 
 export class ButtonMain extends Button {
   constructor ( texture ) {

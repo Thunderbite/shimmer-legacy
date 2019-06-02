@@ -5,13 +5,14 @@
 'use strict'
 
 import { Element } from 'shimmer'
+import { Sprite } from  'shimmer'
 
 export class Moon extends Element {
   constructor () {
     super()
 
     let image = Sprite.fromImage( '/image2.png' )
-    this.addChild( image )
+    this.addElementChild( 'image', image )
   }
 }
 ```
