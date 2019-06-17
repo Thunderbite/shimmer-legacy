@@ -57,11 +57,12 @@ export class Shimmer extends Component {
   /**
    * Creates an instance of Shimmer
    * @param {HTMLElement} parent The parent wrapper
+   * @param {Module} module The parent module instance
    * @param {Config} config A Config class instance
    * @param {Store} store A Store class instance
    */
-  constructor ( parent, config, store ) {
-    super( parent, config, store )
+  constructor ( parent, module, config, store ) {
+    super( parent, module, config, store )
 
     skipHello()
 
