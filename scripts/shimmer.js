@@ -33,8 +33,7 @@ export class Shimmer extends Component {
    * @param {Number} height The height of the container
    */
   onResize ( width, height ) {
-    super.onResize( width, height )
-    this.renderer.resize( this.element.clientWidth, this.element.clientHeight )
+    this.renderer.resize( width, height )
   }
 
   /**
@@ -73,6 +72,37 @@ export class Shimmer extends Component {
     this.stage = new Element()
     this.stage.__config = this.config
     this.stage.__store = this.store
+
+    /**
+     * Holds the previous width and height of the parent container
+     * @type {Object}
+     * @private
+     */
+    let previousParentSize = {}
+    /**
+     * Determines if the component watches for resize changes in parent dimensions
+     * @type {Boolean}
+     * @private
+     */
+    this.__resizeWatcher = true
+    /**
+     * This function checks for parent size changes every 100ms as long as the component exists
+     * @type {Function}
+     * @private
+     */
+    const parentResizeCheck = () => {
+      setTimeout( () => {
+        if ( this.__resizeWatcher ) {
+          if ( previousParentSize.width !== this.parent.clientWidth || previousParentSize.height !== this.parent.clientHeight ) {
+            previousParentSize.width = this.parent.clientWidth
+            previousParentSize.height = this.parent.clientHeight
+            this.onResize( previousParentSize.width, previousParentSize.height )
+          }
+          parentResizeCheck()
+        }
+      }, 100 )
+    }
+    parentResizeCheck()
 
     /**
      * Stores the main ticker, which handles animation frames
