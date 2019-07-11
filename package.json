@@ -1,6 +1,6 @@
 {
   "name": "shimmer",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "A PIXI.JS wrapper plugin for MODUX",
   "author": "Crisp Code ( contact@crispcode.ro )",
   "engines": {
@@ -16,22 +16,22 @@
     "url": "https://github.com/CrispCode/shimmer/issues"
   },
   "dependencies": {
-    "@pixi/core": "^5.0.2",
-    "@pixi/display": "^5.0.1",
-    "@pixi/sprite": "^5.0.2",
-    "@pixi/sprite-animated": "^5.0.3",
-    "@pixi/text": "^5.0.3",
-    "@pixi/graphics": "^5.0.3",
-    "@pixi/ticker": "^5.0.1",
-    "@pixi/loaders": "^5.0.2",
-    "@pixi/interaction": "^5.0.2",
-    "@pixi/utils": "^5.0.1"
+    "@pixi/core": "^5.0.4",
+    "@pixi/display": "^5.0.4",
+    "@pixi/sprite": "^5.0.4",
+    "@pixi/sprite-animated": "^5.0.4",
+    "@pixi/text": "^5.0.4",
+    "@pixi/graphics": "^5.0.4",
+    "@pixi/ticker": "^5.0.4",
+    "@pixi/loaders": "^5.0.4",
+    "@pixi/interaction": "^5.0.4",
+    "@pixi/utils": "^5.0.4"
   },
   "peerDependencies": {
-    "modux": "CrispCode/modux#v2"
+    "modux": "CrispCode/modux#v2.2.0"
   },
   "devDependencies": {
-    "modux": "CrispCode/modux#v2",
+    "modux": "CrispCode/modux#v2.2.0",
     "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0"
   },
