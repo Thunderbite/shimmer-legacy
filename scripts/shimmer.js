@@ -135,6 +135,7 @@ export class Shimmer extends Component {
    */
   __destroy () {
     super.__destroy()
+    this.__resizeWatcher = false
     if ( this.ticker.started ) {
       this.ticker.stop()
     }
