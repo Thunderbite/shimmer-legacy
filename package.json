@@ -1,6 +1,6 @@
 {
   "name": "shimmer",
-  "version": "2.3.5",
+  "version": "2.3.6",
   "description": "A PIXI.JS wrapper plugin for MODUX",
   "author": "Crisp Code ( contact@crispcode.ro )",
   "engines": {
@@ -16,16 +16,16 @@
     "url": "https://github.com/CrispCode/shimmer/issues"
   },
   "dependencies": {
-    "@pixi/core": "^5.0.4",
-    "@pixi/display": "^5.0.4",
-    "@pixi/sprite": "^5.0.4",
-    "@pixi/sprite-animated": "^5.0.4",
-    "@pixi/text": "^5.0.4",
-    "@pixi/graphics": "^5.0.4",
-    "@pixi/ticker": "^5.0.4",
-    "@pixi/loaders": "^5.0.4",
-    "@pixi/interaction": "^5.0.4",
-    "@pixi/utils": "^5.0.4"
+    "@pixi/core": "^5.1.1",
+    "@pixi/display": "^5.1.1",
+    "@pixi/sprite": "^5.1.1",
+    "@pixi/sprite-animated": "^5.1.1",
+    "@pixi/text": "^5.1.1",
+    "@pixi/graphics": "^5.1.1",
+    "@pixi/ticker": "^5.1.1",
+    "@pixi/loaders": "^5.1.1",
+    "@pixi/interaction": "^5.1.1",
+    "@pixi/utils": "^5.1.1"
   },
   "peerDependencies": {
     "modux": "CrispCode/modux#v2.2.1"
