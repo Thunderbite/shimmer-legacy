@@ -74,11 +74,11 @@ export class Shimmer extends Component {
     this.stage.__store = this.store
 
     /**
-     * Holds the previous width and height of the parent container
+     * Holds the previous width and height of the element
      * @type {Object}
      * @private
      */
-    let previousParentSize = {}
+    let previousElementSize = {}
     /**
      * Determines if the component watches for resize changes in parent dimensions
      * @type {Boolean}
@@ -86,17 +86,17 @@ export class Shimmer extends Component {
      */
     this.__resizeWatcher = true
     /**
-     * This function checks for parent size changes every 100ms as long as the component exists
+     * This function checks for element size changes every 100ms as long as the component exists
      * @type {Function}
      * @private
      */
     const parentResizeCheck = () => {
       setTimeout( () => {
         if ( this.__resizeWatcher ) {
-          if ( previousParentSize.width !== this.parent.clientWidth || previousParentSize.height !== this.parent.clientHeight ) {
-            previousParentSize.width = this.parent.clientWidth
-            previousParentSize.height = this.parent.clientHeight
-            this.onResize( previousParentSize.width, previousParentSize.height )
+          if ( previousElementSize.width !== this.element.clientWidth || previousElementSize.height !== this.element.clientHeight ) {
+            previousElementSize.width = this.element.clientWidth
+            previousElementSize.height = this.element.clientHeight
+            this.onResize( previousElementSize.width, previousElementSize.height )
           }
           parentResizeCheck()
         }
