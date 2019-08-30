@@ -9,6 +9,7 @@ import { Sprite } from '@pixi/sprite'
 import { AnimatedSprite } from '@pixi/sprite-animated'
 import { Text } from '@pixi/text'
 import { Graphics } from '@pixi/Graphics'
+import { Texture } from '@pixi/core'
 
 export {
   Shimmer,
@@ -19,5 +20,6 @@ export {
   Sprite,
   AnimatedSprite,
   Text,
+  Texture,
   Graphics
 }
