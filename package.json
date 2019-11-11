@@ -28,10 +28,10 @@
     "@pixi/utils": "^5.1.1"
   },
   "peerDependencies": {
-    "modux": "CrispCode/modux#v2.2.2"
+    "modux": "CrispCode/modux#v2.2.3"
   },
   "devDependencies": {
-    "modux": "CrispCode/modux#v2.2.2",
+    "modux": "CrispCode/modux#v2.2.3",
     "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0"
   },
