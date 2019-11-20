@@ -33,7 +33,7 @@ export class Shimmer extends Component {
    * @param {Number} height The height of the container
    */
   onResize ( width, height ) {
-    this.renderer.resize( width, height )
+
   }
 
   /**
