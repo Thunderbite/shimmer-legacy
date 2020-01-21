@@ -1,6 +1,6 @@
 'use strict'
 
-import { radians } from 'modux'
+import { radians } from '@crispcode/modux'
 
 import { Element, Sprite } from './../../../../scripts'
 

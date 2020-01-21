@@ -1,6 +1,6 @@
 'use strict'
 
-import { approx, loop } from 'modux'
+import { approx, loop } from '@crispcode/modux'
 
 /**
  * This class is used to create a tween

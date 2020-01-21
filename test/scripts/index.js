@@ -2,7 +2,7 @@
 
 'use strict'
 
-import { Module, config, Router, logger } from 'modux'
+import { Module, config, Router, logger } from '@crispcode/modux'
 
 import { LayoutComponent } from './components/layout'
 import { ShimmerComponent } from './components/shimmer'

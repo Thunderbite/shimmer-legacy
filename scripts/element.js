@@ -1,6 +1,6 @@
 'use strict'
 
-import { loop, uid } from 'modux'
+import { loop, uid } from '@crispcode/modux'
 
 import { Container } from '@pixi/display'
 

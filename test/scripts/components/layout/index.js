@@ -1,6 +1,6 @@
 'use strict'
 
-import { Component } from 'modux'
+import { Component } from '@crispcode/modux'
 
 export class LayoutComponent extends Component {
   get template () {

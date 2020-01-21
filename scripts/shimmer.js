@@ -2,7 +2,7 @@
 
 'use strict'
 
-import { Component, loop } from 'modux'
+import { Component, loop } from '@crispcode/modux'
 
 import { Loader } from '@pixi/loaders'
 import { Ticker } from '@pixi/ticker'

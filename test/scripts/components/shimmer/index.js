@@ -1,6 +1,6 @@
 'use strict'
 
-import { rnd, loop } from 'modux'
+import { rnd, loop } from '@crispcode/modux'
 
 import { Shimmer } from './../../../../scripts'
 
