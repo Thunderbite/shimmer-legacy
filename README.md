@@ -4,7 +4,7 @@ A PIXI.JS wrapper plugin for MODUX
 ## Installation
 
 ```
-npm install CrispCode/shimmer#v2.4.7 --save-dev
+npm install CrispCode/shimmer#v2.5.0 --save-dev
 ```
 
 ## Documentation & Testing
@@ -34,4 +34,6 @@ In order to support older versions of browsers, you can use polyfills:
   | AnimatedSprite | `import { AnimatedSprite } from 'shimmer'` | PIXI.JS AnimatedSprite class |
   | Text | `import { Text } from 'shimmer'` | PIXI.JS Text class |
   | Graphics | `import { Graphics } from 'shimmer'` | PIXI.JS Graphics class |
+  | Texture | `import { Texture } from 'shimmer'` | PIXI.JS Texture class |
+  | BaseTexture | `import { BaseTexture } from 'shimmer'` | PIXI.JS BaseTexture class |
   
