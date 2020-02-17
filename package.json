@@ -1,6 +1,6 @@
 {
   "name": "shimmer",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "description": "A PIXI.JS wrapper plugin for MODUX",
   "author": "Crisp Code ( contact@crispcode.ro )",
   "engines": {
