@@ -4,13 +4,12 @@
 
 import { Component, loop } from '@crispcode/modux'
 
-import { Loader } from '@pixi/loaders'
-import { Ticker } from '@pixi/ticker'
-import { autoDetectRenderer, Renderer, BatchRenderer } from '@pixi/core'
-import { InteractionManager } from '@pixi/interaction'
-import { skipHello } from '@pixi/utils'
+import { Loader } from 'pixi.js-legacy'
+import { Ticker } from 'pixi.js-legacy'
+import { autoDetectRenderer, Renderer, BatchRenderer } from 'pixi.js-legacy'
+import { Interaction } from 'pixi.js-legacy'
 
-Renderer.registerPlugin( 'interaction', InteractionManager )
+Renderer.registerPlugin( 'interaction', Interaction )
 Renderer.registerPlugin( 'batch', BatchRenderer )
 
 import { Element } from './element.js'

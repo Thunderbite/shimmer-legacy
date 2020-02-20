@@ -2,7 +2,7 @@
 
 import { loop, uid } from '@crispcode/modux'
 
-import { Container } from '@pixi/display'
+import { Container } from 'pixi.js-legacy'
 
 import { Tween } from './tween.js'
 

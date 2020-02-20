@@ -6,11 +6,11 @@ import { Button } from './button.js'
 import { Element } from './element.js'
 import { Tween } from './tween.js'
 
-import { Sprite } from '@pixi/sprite'
-import { AnimatedSprite } from '@pixi/sprite-animated'
-import { Text } from '@pixi/text'
-import { Graphics } from '@pixi/Graphics'
-import { BaseTexture, Texture } from '@pixi/core'
+import { Sprite } from 'pixi.js-legacy'
+import { AnimatedSprite } from 'pixi.js-legacy'
+import { Text } from 'pixi.js-legacy'
+import { Graphics } from 'pixi.js-legacy'
+import { Texture } from 'pixi.js-legacy'
 
 export {
   Shimmer,
