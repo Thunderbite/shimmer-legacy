@@ -7,9 +7,9 @@ import { Component, loop } from '@crispcode/modux'
 import { Loader } from 'pixi.js-legacy'
 import { Ticker } from 'pixi.js-legacy'
 import { autoDetectRenderer, Renderer, BatchRenderer } from 'pixi.js-legacy'
-import { Interaction } from 'pixi.js-legacy'
+import { InteractionManager } from '@pixi/interaction'
 
-Renderer.registerPlugin( 'interaction', Interaction )
+Renderer.registerPlugin( 'interaction', InteractionManager )
 Renderer.registerPlugin( 'batch', BatchRenderer )
 
 import { Element } from './element.js'
@@ -61,8 +61,9 @@ export class Shimmer extends Component {
    */
   constructor ( parent, module, config, store ) {
     super( parent, module, config, store )
-
-    skipHello()
+    if ( skipHello ) {
+      skipHello()
+    }
 
     /**
      * Stores the parent Element

@@ -23,6 +23,5 @@ export {
   AnimatedSprite,
   Text,
   Texture,
-  BaseTexture,
   Graphics
 }
