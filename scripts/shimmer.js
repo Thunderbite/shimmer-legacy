@@ -61,10 +61,6 @@ export class Shimmer extends Component {
    */
   constructor ( parent, module, config, store ) {
     super( parent, module, config, store )
-    if ( skipHello ) {
-      skipHello()
-    }
-
     /**
      * Stores the parent Element
      * @type {Element}
