@@ -1,5 +1,5 @@
 {
-  "name": "shimmer",
+  "name": "shimmer-legacy",
   "version": "1.0.0",
   "description": "Shimmer with pixi.js-legacy for canvas rendering",
   "main": "scripts/index.js",
